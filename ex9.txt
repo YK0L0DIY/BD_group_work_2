@@ -1,0 +1,40 @@
+----AVIOES----
+--a--
+INSERT INTO Modelo Values ('737',200,2000);
+INSERT INTO Aviao Values ('Aleixo Abreu','Boeing');
+INSERT INTO modelo_de Values ('737','Aleixo Abreu');
+
+--b--
+INSERT INTO Aviao Values('Afonso Lopes','Boeing');
+INSERT INTO modelo_de Values ('737','Afonso Lopes');
+
+--c--
+INSERT INTO Aviao Values('Bartolomeu Dias','Boeing');
+INSERT INTO modelo_de Values ('737','Bartolomeu Dias');
+
+--d--
+INSERT INTO Modelo Values('777',400,8000);
+INSERT INTO Aviao Values('Diogo Dias','Boeing');
+INSERT INTO modelo_de Values('777','Diogo Dias');
+
+--e--
+INSERT INTO Aviao Values('Francisco Zeimoto','Boeing');
+INSERT INTO modelo_de Values('777','Francisco Zeimoto');
+
+--f--
+INSERT INTO Modelo Values('A318',150,3000);
+INSERT INTO Aviao Values('Gil Eanes','Airbus');
+INSERT INTO modelo_de Values('A318','Gil Eanes');
+
+--g--
+INSERT INTO Aviao Values('Gomes de Sequeira','Airbus');
+INSERT INTO modelo_de Values('A318','Gomes de Sequeira');
+
+--h--
+INSERT INTO Aviao Values('Gomes Pires','Airbus');
+INSERT INTO modelo_de Values('A318','Gomes Pires');
+
+--i--
+INSERT INTO Modelo Values('A380',600,15000);
+INSERT INTO Aviao Values('Nicolau Coelho', 'Airbus');
+INSERT INTO modelo_de Values('A380', 'Nicolau Coelho');
