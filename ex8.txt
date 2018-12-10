@@ -1,0 +1,17 @@
+create table Modelo(
+	Modelo text Primary Key,
+	nLugares integer,
+	Autonomia integer	
+);
+
+create table Aviao(
+	NomeA text Primary Key,
+	Marca text
+);
+
+create table modelo_de(
+	Modelo References Modelo on delete Cascade,
+	NomeA References Aviao on delete Cascade,
+	Primary Key(Modelo,NomeA)
+);
+
