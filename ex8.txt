@@ -10,8 +10,8 @@ create table Aviao(
 );
 
 create table modelo_de(
-	Modelo References Modelo on delete Cascade,
-	NomeA References Aviao on delete Cascade,
+	Modelo text References Modelo on delete Cascade,
+	NomeA text References Aviao on delete Cascade,
 	Primary Key(Modelo,NomeA)
 );
 
@@ -23,19 +23,19 @@ create table Funcionario(
 );
 
 create table Piloto(
-	nBI References Funcionario on delete Cascade,
+	nBI integer References Funcionario on delete Cascade,
 	nCarta integer,
 	anoInicio integer,
 	Primary Key(nBI)
 );
 
 create table Admin(
-	nBI References Funcionario on delete Cascade,
+	nBI integer References Funcionario on delete Cascade,
 	Primary Key(nBI)
 );
 
 create table Hosp(
-	nBI References Funcionario on delete Cascade,
+	nBI integer References Funcionario on delete Cascade,
 	altura integer,
 	peso integer,
 	anoInicio integer,
@@ -43,16 +43,11 @@ create table Hosp(
 );
 
 create table Comiss(
-	nBI References Funcionario on delete Cascade,
+	nBI integer References Funcionario on delete Cascade,
 	altura integer,
 	peso integer,
 	anoInicio integer,
 	Primary Key(nBI)
-);
-
-create table Voo_executado(
-	nVooExecutado integer Primary Key,
-	nVoo References on delete Cascade Voo_planeado
 );
 
 create table Voo_planeado(
@@ -65,44 +60,52 @@ create table Voo_planeado(
 	kms integer
 );
 
+create table Voo_executado(
+	nVooExecutado integer Primary Key,
+	nVoo integer References Voo_planeado on delete Cascade);
+
 create table AUsado(
-	nVoo references Voo_planeado on delete Cascade,
-	nVooExecutado References Voo_executado on delete Cascade,
-	NomeA References Aviao on delete Cascade
+	nVoo integer references Voo_planeado on delete Cascade,
+	nVooExecutado integer References Voo_executado on delete Cascade,
+	NomeA text References Aviao on delete Cascade
 );
 
 create table PilotoUsado(
-	nVoo references Voo_planeado on delete Cascade,
-	nVooExecutado References Voo_executado on delete Cascade,
-	nBI References Funcionario on delete Cascade
+	nVoo integer references Voo_planeado on delete Cascade,
+	nVooExecutado integer References Voo_executado on delete Cascade,
+	nBI integer References Funcionario on delete Cascade
 );
 
 create table HospUsado(
-	nVoo references Voo_planeado on delete Cascade,
-	nVooExecutado References Voo_executado on delete Cascade,
-	nBI References Funcionario on delete Cascade
+	nVoo integer references Voo_planeado on delete Cascade,
+	nVooExecutado integer References Voo_executado on delete Cascade,
+	nBI integer References Funcionario on delete Cascade
 );
 
 create table ComissUsado(
-	nVoo references Voo_planeado on delete Cascade,
-	nVooExecutado References Voo_executado on delete Cascade,
-	nBI References Funcionario on delete Cascade
+	nVoo integer references Voo_planeado on delete Cascade,
+	nVooExecutado integer References Voo_executado on delete Cascade,
+	nBI integer References Funcionario on delete Cascade
 );
 
 create table RestricaoPilotos(
 	AnosExpMin integer,
 	nPilotos integer,
-	Primary Key(AnosExpMin,nPilotos)
+	nVoo integer references Voo_planeado on delete Cascade,
+	Primary Key(nvoo,AnosExpMin,nPilotos)
+	
 );
 
 create table RestricaoHosp(
 	PesoMax integer,
 	nHosp integer,
-	Primary Key(PesoMax,nPilotos)
+	nVoo integer references Voo_planeado on delete Cascade,
+	Primary Key(nvoo,PesoMax,nHosp)
 );
 
 create table RestricaoComiss(
 	AltMin integer,
 	nComiss integer,
-	Primary Key(AltMin,nPilotos)
+	nVoo integer references Voo_planeado on delete Cascade,
+	Primary Key(nvoo,AltMin,nComiss)
 );

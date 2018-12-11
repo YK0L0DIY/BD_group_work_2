@@ -1,0 +1,15 @@
+--a--
+select nvoo,origem,destino,horasPartida
+from voo_planeado
+where diaSemana='Domingo'
+
+--b--
+
+
+--c--perguntar
+
+with maximo value as(Select max(autonomia)
+			  		from modelo)
+select nomeA
+from aviao natural inner join modelo_de natural inner join modelo
+where maximo=autonomia

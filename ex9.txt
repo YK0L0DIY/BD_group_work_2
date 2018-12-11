@@ -39,14 +39,14 @@ INSERT INTO Modelo Values('A380',600,15000);
 INSERT INTO Aviao Values('Nicolau Coelho', 'Airbus');
 INSERT INTO modelo_de Values('A380', 'Nicolau Coelho');
 
-----FUNCIONARIOS----
+----funcionarios----
 --a--
-INSERT INTO Funcionarios Values(1,1234,'Manuel',2-1-1974);
-INSERT INTO Funcionarios Values(2,5678,'Maria',2-1-1974);
-INSERT INTO Funcionarios Values(3,9012,'Joaquina',2-1-1974);
-INSERT INTO Funcionarios Values(4,3456,'Manuela',2-1-1974);
-INSERT INTO Funcionarios Values(5,7890,'Jose',2-1-1974);
-INSERT INTO Funcionarios Values(6,1357,'Vasco',2-1-1974);
+INSERT INTO Funcionario Values(1,1234,'Manuel','1974-01-02');
+INSERT INTO Funcionario Values(2,5678,'Maria','2-1-1974');
+INSERT INTO Funcionario Values(3,9012,'Joaquina','2-1-1974');
+INSERT INTO Funcionario Values(4,3456,'Manuela','2-1-1974');
+INSERT INTO Funcionario Values(5,7890,'Jose','2-1-1974');
+INSERT INTO Funcionario Values(6,1357,'Vasco','2-1-1974');
 
 INSERT INTO Admin Values(1);
 INSERT INTO Admin Values(2);
@@ -56,83 +56,123 @@ INSERT INTO Admin Values(5);
 INSERT INTO Admin Values(6);
 
 --b--
-INSERT INTO Funcionario Values(10,2006,'Ricardo',5-1-1975);
-INSERT INTO Funcionario Values(11,2007,'Daniel',5-1-1975);
-INSERT INTO Funcionario Values(12,2008,'Sebastiao',5-1-1975);
-INSERT INTO Funcionario Values(13,2009,'Joao',5-1-1975);
-INSERT INTO Funcionario Values(14,2010,'Ines',5-1-1975);
-INSERT INTO Funcionario Values(15,2011,'Mafalda',5-1-1975);
-INSERT INTO Funcionario Values(16,2012,'Laura',5-1-1975);
-INSERT INTO Funcionario Values(17,2013,'Joaquim',5-1-1975);
-INSERT INTO Funcionario Values(18,2014,'Antonio',5-1-1975);
-INSERT INTO Funcionario Values(19,2015,'Irene',5-1-1975);
+INSERT INTO Funcionario Values(10,2006,'Ricardo','5-1-1975');
+INSERT INTO Funcionario Values(11,2007,'Daniel','5-1-1975');
+INSERT INTO Funcionario Values(12,2008,'Sebastiao','5-1-1975');
+INSERT INTO Funcionario Values(13,2009,'Joao','5-1-1975');
+INSERT INTO Funcionario Values(14,2010,'Ines','5-1-1975');
+INSERT INTO Funcionario Values(15,2011,'Mafalda','5-1-1975');
+INSERT INTO Funcionario Values(16,2012,'Laura','5-1-1975');
+INSERT INTO Funcionario Values(17,2013,'Joaquim','5-1-1975');
+INSERT INTO Funcionario Values(18,2014,'Antonio','5-1-1975');
+INSERT INTO Funcionario Values(19,2015,'Irene','5-1-1975');
 
-INSERT INTO Pilotos(10,56,10);
-INSERT INTO Pilotos(11,57,10);
-INSERT INTO Pilotos(12,58,10);
-INSERT INTO Pilotos(13,59,10);
+INSERT INTO Piloto Values(10,56,2008);
+INSERT INTO Piloto Values(11,57,2008);
+INSERT INTO Piloto Values(12,58,2008);
+INSERT INTO Piloto Values(13,59,2008);
 
-INSERT INTO Pilotos(14,60,7);
-INSERT INTO Pilotos(15,61,7);
-INSERT INTO Pilotos(16,62,7);
-INSERT INTO Pilotos(17,63,7);
-INSERT INTO Pilotos(18,64,7);
-INSERT INTO Pilotos(19,65,7);
+INSERT INTO Piloto Values(14,60,2011);
+INSERT INTO Piloto Values(15,61,2011);
+INSERT INTO Piloto Values(16,62,2011);
+INSERT INTO Piloto Values(17,63,2011);
+INSERT INTO Piloto Values(18,64,2011);
+INSERT INTO Piloto Values(19,65,2011);
 
 --c--
-INSERT INTO Funcionario Values(20,2016,'Ricarda',6-1-1977);
-INSERT INTO Funcionario Values(21,2017,'Daniela',6-1-1977);
-INSERT INTO Funcionario Values(22,2018,'Flavia',6-1-1977);
-INSERT INTO Funcionario Values(23,2019,'Joana',6-1-1977);
-INSERT INTO Funcionario Values(24,2020,'Ines',6-1-1977);
-INSERT INTO Funcionario Values(25,2021,'Mafalda',6-1-1977);
-INSERT INTO Funcionario Values(26,2022,'Laura',6-1-1977);
-INSERT INTO Funcionario Values(27,2023,'Joaquina',6-1-1977);
-INSERT INTO Funcionario Values(28,2024,'Antonia',6-1-1977);
-INSERT INTO Funcionario Values(29,2025,'Irene',6-1-1977);
-INSERT INTO Funcionario Values(30,2026,'Ricarda',6-1-1977);
-INSERT INTO Funcionario Values(31,2027,'Daniela',6-1-1977);
-INSERT INTO Funcionario Values(32,2028,'Josefa',6-1-1977);
-INSERT INTO Funcionario Values(33,2029,'Maria',6-1-1977);
-INSERT INTO Funcionario Values(34,2030,'Ines',6-1-1977);
+INSERT INTO Funcionario Values(20,2016,'Ricarda','6-1-1977');
+INSERT INTO Funcionario Values(21,2017,'Daniela','6-1-1977');
+INSERT INTO Funcionario Values(22,2018,'Flavia','6-1-1977');
+INSERT INTO Funcionario Values(23,2019,'Joana','6-1-1977');
+INSERT INTO Funcionario Values(24,2020,'Ines','6-1-1977');
+INSERT INTO Funcionario Values(25,2021,'Mafalda','6-1-1977');
+INSERT INTO Funcionario Values(26,2022,'Laura','6-1-1977');
+INSERT INTO Funcionario Values(27,2023,'Joaquina','6-1-1977');
+INSERT INTO Funcionario Values(28,2024,'Antonia','6-1-1977');
+INSERT INTO Funcionario Values(29,2025,'Irene','6-1-1977');
+INSERT INTO Funcionario Values(30,2026,'Ricarda','6-1-1977');
+INSERT INTO Funcionario Values(31,2027,'Daniela','6-1-1977');
+INSERT INTO Funcionario Values(32,2028,'Josefa','6-1-1977');
+INSERT INTO Funcionario Values(33,2029,'Maria','6-1-1977');
+INSERT INTO Funcionario Values(34,2030,'Ines','6-1-1977');
 
-INSERT INTO Hosp Values(20,178,45,1978);
-INSERT INTO Hosp Values(21,178,46,1979);
-INSERT INTO Hosp Values(22,178,47,1960);
-INSERT INTO Hosp Values(23,178,81,1965);
-INSERT INTO Hosp Values(24,178,49,1980);
-INSERT INTO Hosp Values(25,178,70,1981);
-INSERT INTO Hosp Values(26,178,69,1963);
-INSERT INTO Hosp Values(27,178,71,1964);
-INSERT INTO Hosp Values(28,178,71,1961);
-INSERT INTO Hosp Values(29,178,75,1970);
-INSERT INTO Hosp Values(30,178,73,1973);
-INSERT INTO Hosp Values(31,178,72,1974);
-INSERT INTO Hosp Values(32,178,74,1978);
-INSERT INTO Hosp Values(33,178,74,1975);
-INSERT INTO Hosp Values(34,178,74,1977);
+INSERT INTO Hosp Values(20,178,45,2000);
+INSERT INTO Hosp Values(21,178,46,2000);
+INSERT INTO Hosp Values(22,178,47,2000);
+INSERT INTO Hosp Values(23,178,81,2004);
+INSERT INTO Hosp Values(24,178,49,2000);
+INSERT INTO Hosp Values(25,178,70,2008);
+INSERT INTO Hosp Values(26,178,69,2003);
+INSERT INTO Hosp Values(27,178,71,2003);
+INSERT INTO Hosp Values(28,178,71,2002);
+INSERT INTO Hosp Values(29,178,75,2007);
+INSERT INTO Hosp Values(30,178,73,2001);
+INSERT INTO Hosp Values(31,178,72,2009);
+INSERT INTO Hosp Values(32,178,74,2010);
+INSERT INTO Hosp Values(33,178,74,2003);
+INSERT INTO Hosp Values(34,178,74,2013);
 
 --d--
-INSERT INTO Funcionario Values(40,2031,'Andre',6-1-1977);
-INSERT INTO Funcionario Values(41,2032,'Pedro',6-1-1977);
-INSERT INTO Funcionario Values(42,2033,'Daniel',6-1-1977);
-INSERT INTO Funcionario Values(43,2034,'Joao',6-1-1977);
-INSERT INTO Funcionario Values(44,2035,'Jose',6-1-1977);
-INSERT INTO Funcionario Values(45,2036,'Manuel',6-1-1977);
-INSERT INTO Funcionario Values(46,2037,'Miguel',6-1-1977);
-INSERT INTO Funcionario Values(47,2038,'Joaquim',6-1-1977);
-INSERT INTO Funcionario Values(48,2039,'Antonio',6-1-1977);
-INSERT INTO Funcionario Values(49,2040,'Salvador',6-1-1977);
+INSERT INTO Funcionario Values(40,2031,'Andre','6-1-1977');
+INSERT INTO Funcionario Values(41,2032,'Pedro','6-1-1977');
+INSERT INTO Funcionario Values(42,2033,'Daniel','6-1-1977');
+INSERT INTO Funcionario Values(43,2034,'Joao','6-1-1977');
+INSERT INTO Funcionario Values(44,2035,'Jose','6-1-1977');
+INSERT INTO Funcionario Values(45,2036,'Manuel','6-1-1977');
+INSERT INTO Funcionario Values(46,2037,'Miguel','6-1-1977');
+INSERT INTO Funcionario Values(47,2038,'Joaquim','6-1-1977');
+INSERT INTO Funcionario Values(48,2039,'Antonio','6-1-1977');
+INSERT INTO Funcionario Values(49,2040,'Salvador','6-1-1977');
 
-INSERT INTO Comiss Values(40,186,70,1970);
-INSERT INTO Comiss Values(41,187,73,1971);
-INSERT INTO Comiss Values(42,187,75,1973);
-INSERT INTO Comiss Values(43,188,78,1960);
-INSERT INTO Comiss Values(44,189,79,1965);
-INSERT INTO Comiss Values(45,186,76,1968);
-INSERT INTO Comiss Values(46,184,82,1963);
-INSERT INTO Comiss Values(47,184,73,1964);
-INSERT INTO Comiss Values(48,183,76,1969);
-INSERT INTO Comiss Values(49,182,74,1966);
+INSERT INTO Comiss Values(40,186,70,2009);
+INSERT INTO Comiss Values(41,187,73,2003);
+INSERT INTO Comiss Values(42,187,75,2000);
+INSERT INTO Comiss Values(43,188,78,2000);
+INSERT INTO Comiss Values(44,189,79,2000);
+INSERT INTO Comiss Values(45,186,76,2000);
+INSERT INTO Comiss Values(46,184,82,2003);
+INSERT INTO Comiss Values(47,184,73,2004);
+INSERT INTO Comiss Values(48,183,76,2009);
+INSERT INTO Comiss Values(49,182,74,2006);
 
-----Voos Regulares----
+----Voos Regulares---
+--a--
+INSERT INTO Voo_planeado Values(122,'Nova Iorque','Lisboa','Sabado','10:00:00','13:00:00',9000);
+INSERT INTO RestricaoPilotos Values(9,1,122);
+INSERT INTO RestricaoPilotos Values(5,1,122);
+INSERT INTO RestricaoHosp Values(50,2,122);
+INSERT INTO RestricaoHosp Values(70,2,122);
+INSERT INTO RestricaoComiss Values(180,1,122);
+INSERT INTO RestricaoComiss Values(165,1,122);
+
+--b--
+INSERT INTO Voo_planeado Values(124,'Lisboa','Nova Iorque','Sabado','18:00:00','23:30:00',9000);
+INSERT INTO RestricaoPilotos Values(9,1,124);
+INSERT INTO RestricaoPilotos Values(5,1,124);
+INSERT INTO RestricaoHosp Values(50,1,124);
+INSERT INTO RestricaoHosp Values(70,2,124);
+INSERT INTO RestricaoComiss Values(165,2,124);
+
+--c--
+INSERT INTO Voo_planeado Values(125,'Madrid','Lisboa','Domingo','8:30:00','11:10:00',2000);
+INSERT INTO RestricaoPilotos Values(5,1,125);
+INSERT INTO RestricaoHosp Values(70,2,125);
+INSERT INTO RestricaoComiss Values(165,1,125);
+
+
+--d--
+INSERT INTO Voo_planeado Values(126,'Lisboa','Madrid','Domingo','14:00:00','15:00:00',2000);
+INSERT INTO RestricaoPilotos Values(5,1,126);
+INSERT INTO RestricaoHosp Values(70,2,126);
+INSERT INTO RestricaoComiss Values(165,1,126);
+
+
+
+
+
+
+
+
+
+
+
