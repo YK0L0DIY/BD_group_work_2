@@ -8,8 +8,9 @@ where diaSemana='Domingo'
 
 --c--perguntar
 
-with maximo value as(Select max(autonomia)
+with maximo (autonomia) as(Select max(autonomia) as autonomia
 			  		from modelo)
-select nomeA
-from aviao natural inner join modelo_de natural inner join modelo
-where maximo=autonomia
+select nomea
+from aviao natural inner join modelo_de natural inner join modelo natural inner join maximo
+
+--d--
