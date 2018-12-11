@@ -190,137 +190,137 @@ INSERT INTO RestricaoComiss Values(165,1,128);
 
 ----VOOS EFETIVOS----
 --a--
-INSERT INTO Voo_executado Values(1,127,310,'8:05:00','10:50:00','3-1-2011');
-INSERT INTO Voo_executado Values(1,128,304,'18:05:00','21:50:00','3-1-2011');
-INSERT INTO Voo_executado Values(1,130,250,'12:05:00','12:50:00','3-1-2011');
-INSERT INTO Voo_executado Values(1,131,390,'14:05:00','14:50:00','3-1-2011');
+INSERT INTO Voo_executado Values(1,127,310,'8:05:00','10:50:00','3-1-2011',1);
+INSERT INTO Voo_executado Values(1,128,304,'18:05:00','21:50:00','3-1-2011',2);
+INSERT INTO Voo_executado Values(1,130,250,'12:05:00','12:50:00','3-1-2011',3);
+INSERT INTO Voo_executado Values(1,131,390,'14:05:00','14:50:00','3-1-2011',4);
 
-INSERT INTO AUsado Values(127,1,'Francisco Zeimoto');
-INSERT INTO AUsado Values(128,1,'Francisco Zeimoto');
-INSERT INTO AUsado Values(130,1,'Francisco Zeimoto');
-INSERT INTO AUsado Values(131,1,'Francisco Zeimoto');
+INSERT INTO AUsado Values(1,'Francisco Zeimoto');
+INSERT INTO AUsado Values(2,'Francisco Zeimoto');
+INSERT INTO AUsado Values(3,'Francisco Zeimoto');
+INSERT INTO AUsado Values(4,'Francisco Zeimoto');
 
-INSERT INTO PilotoUsado Values(127,1,10);
-INSERT INTO PilotoUsado Values(127,1,14);
-INSERT INTO HospUsado Values(127,1,20);
-INSERT INTO HospUsado Values(127,1,25);
-INSERT INTO HospUsado Values(127,1,30);
-INSERT INTO HospUsado Values(127,1,31);
-INSERT INTO ComissUsado Values(127,1,40);
+INSERT INTO PilotoUsado Values(1,10);
+INSERT INTO PilotoUsado Values(1,14);
+INSERT INTO HospUsado Values(1,20);
+INSERT INTO HospUsado Values(1,25);
+INSERT INTO HospUsado Values(1,30);
+INSERT INTO HospUsado Values(1,31);
+INSERT INTO ComissUsado Values(1,40);
 
-INSERT INTO PilotoUsado Values(128,1,10);
-INSERT INTO PilotoUsado Values(128,1,14);
-INSERT INTO HospUsado Values(128,1,20);
-INSERT INTO HospUsado Values(128,1,25);
-INSERT INTO HospUsado Values(128,1,30);
-INSERT INTO HospUsado Values(128,1,31);
-INSERT INTO ComissUsado Values(128,1,40);
+INSERT INTO PilotoUsado Values(2,10);
+INSERT INTO PilotoUsado Values(2,14);
+INSERT INTO HospUsado Values(2,20);
+INSERT INTO HospUsado Values(2,25);
+INSERT INTO HospUsado Values(2,30);
+INSERT INTO HospUsado Values(2,31);
+INSERT INTO ComissUsado Values(2,40);
 
-INSERT INTO PilotoUsado Values(130,1,10);
-INSERT INTO PilotoUsado Values(130,1,14);
-INSERT INTO HospUsado Values(130,1,20);
-INSERT INTO HospUsado Values(130,1,25);
-INSERT INTO HospUsado Values(130,1,30);
-INSERT INTO HospUsado Values(130,1,31);
-INSERT INTO ComissUsado Values(130,1,40);
+INSERT INTO PilotoUsado Values(3,10);
+INSERT INTO PilotoUsado Values(3,14);
+INSERT INTO HospUsado Values(3,20);
+INSERT INTO HospUsado Values(3,25);
+INSERT INTO HospUsado Values(3,30);
+INSERT INTO HospUsado Values(3,31);
+INSERT INTO ComissUsado Values(3,40);
 
-INSERT INTO PilotoUsado Values(131,1,10);
-INSERT INTO PilotoUsado Values(131,1,14);
-INSERT INTO HospUsado Values(131,1,20);
-INSERT INTO HospUsado Values(131,1,25);
-INSERT INTO HospUsado Values(131,1,30);
-INSERT INTO HospUsado Values(131,1,31);
-INSERT INTO ComissUsado Values(131,1,40);
+INSERT INTO PilotoUsado Values(4,10);
+INSERT INTO PilotoUsado Values(4,14);
+INSERT INTO HospUsado Values(4,20);
+INSERT INTO HospUsado Values(4,25);
+INSERT INTO HospUsado Values(4,30);
+INSERT INTO HospUsado Values(4,31);
+INSERT INTO ComissUsado Values(4,40);
 
 --b--
-INSERT INTO Voo_executado Values(2,122,320,'10:00:00','13:00:00','1-1-2011');
-INSERT INTO Voo_executado Values(2,124,290,'18:00:00','23:00:00','1-1-2011');
+INSERT INTO Voo_executado Values(2,122,320,'10:00:00','13:00:00','1-1-2011',5);
+INSERT INTO Voo_executado Values(2,124,290,'18:00:00','23:00:00','1-1-2011',6);
 
-INSERT INTO AUsado Values(122,2,'Nicolau Coelho');
-INSERT INTO AUsado Values(124,2,'Nicolau Coelho');
+INSERT INTO AUsado Values(5,'Nicolau Coelho');
+INSERT INTO AUsado Values(6,'Nicolau Coelho');
 
-INSERT INTO PilotoUsado Values(122,2,11);
-INSERT INTO PilotoUsado Values(122,2,12);
-INSERT INTO HospUsado Values(122,2,21);
-INSERT INTO HospUsado Values(122,2,22);
-INSERT INTO HospUsado Values(122,2,33);
-INSERT INTO HospUsado Values(122,2,34);
-INSERT INTO ComissUsado Values(127,2,48);
-INSERT INTO ComissUsado Values(122,2,49);
+INSERT INTO PilotoUsado Values(5,11);
+INSERT INTO PilotoUsado Values(5,12);
+INSERT INTO HospUsado Values(5,21);
+INSERT INTO HospUsado Values(5,22);
+INSERT INTO HospUsado Values(5,33);
+INSERT INTO HospUsado Values(5,34);
+INSERT INTO ComissUsado Values(5,48);
+INSERT INTO ComissUsado Values(5,49);
 
-INSERT INTO PilotoUsado Values(124,2,11);
-INSERT INTO PilotoUsado Values(124,2,12);
-INSERT INTO HospUsado Values(124,2,21);
-INSERT INTO HospUsado Values(124,2,22);
-INSERT INTO HospUsado Values(124,2,33);
-INSERT INTO HospUsado Values(124,2,34);
-INSERT INTO ComissUsado Values(124,2,48);
-INSERT INTO ComissUsado Values(124,2,49);
+INSERT INTO PilotoUsado Values(6,11);
+INSERT INTO PilotoUsado Values(6,12);
+INSERT INTO HospUsado Values(6,21);
+INSERT INTO HospUsado Values(6,22);
+INSERT INTO HospUsado Values(6,33);
+INSERT INTO HospUsado Values(6,34);
+INSERT INTO ComissUsado Values(6,48);
+INSERT INTO ComissUsado Values(6,49);
 
 --c--
-INSERT INTO Voo_executado Values(3,122,320,'10:00:00','13:00:00','8-1-2011');
-INSERT INTO Voo_executado Values(3,124,290,'18:00:00','23:00:00','8-1-2011');
+INSERT INTO Voo_executado Values(3,122,320,'10:00:00','13:00:00','8-1-2011',7);
+INSERT INTO Voo_executado Values(3,124,290,'18:00:00','23:00:00','8-1-2011',8);
 
-INSERT INTO AUsado Values(122,3,'Nicolau Coelho');
-INSERT INTO AUsado Values(124,3,'Nicolau Coelho');
+INSERT INTO AUsado Values(7,'Nicolau Coelho');
+INSERT INTO AUsado Values(8,'Nicolau Coelho');
 
-INSERT INTO PilotoUsado Values(122,3,11);
-INSERT INTO PilotoUsado Values(122,3,12);
-INSERT INTO HospUsado Values(122,3,21);
-INSERT INTO HospUsado Values(122,3,22);
-INSERT INTO HospUsado Values(122,3,33);
-INSERT INTO HospUsado Values(122,3,34);
-INSERT INTO ComissUsado Values(127,3,48);
-INSERT INTO ComissUsado Values(122,3,49);
+INSERT INTO PilotoUsado Values(7,11);
+INSERT INTO PilotoUsado Values(7,12);
+INSERT INTO HospUsado Values(7,21);
+INSERT INTO HospUsado Values(7,22);
+INSERT INTO HospUsado Values(7,33);
+INSERT INTO HospUsado Values(7,34);
+INSERT INTO ComissUsado Values(7,48);
+INSERT INTO ComissUsado Values(7,49);
 
-INSERT INTO PilotoUsado Values(124,3,11);
-INSERT INTO PilotoUsado Values(124,3,12);
-INSERT INTO HospUsado Values(124,3,21);
-INSERT INTO HospUsado Values(124,3,22);
-INSERT INTO HospUsado Values(124,3,33);
-INSERT INTO HospUsado Values(124,3,34);
-INSERT INTO ComissUsado Values(124,3,48);
-INSERT INTO ComissUsado Values(124,3,49);
+INSERT INTO PilotoUsado Values(8,11);
+INSERT INTO PilotoUsado Values(8,12);
+INSERT INTO HospUsado Values(8,21);
+INSERT INTO HospUsado Values(8,22);
+INSERT INTO HospUsado Values(8,33);
+INSERT INTO HospUsado Values(8,34);
+INSERT INTO ComissUsado Values(8,48);
+INSERT INTO ComissUsado Values(8,49);
 
 --d--
-INSERT INTO Voo_executado Values(4,127,310,'8:00:00','11:00:00','10-1-2011');
-INSERT INTO Voo_executado Values(4,128,304,'18:00:00','22:00:00','10-1-2011');
-INSERT INTO Voo_executado Values(4,130,250,'12:0:00','13:00:00','10-1-2011');
-INSERT INTO Voo_executado Values(4,131,390,'14:00:00','15:00:00','10-1-2011');
+INSERT INTO Voo_executado Values(4,127,310,'8:00:00','11:00:00','10-1-2011',9);
+INSERT INTO Voo_executado Values(4,128,304,'18:00:00','22:00:00','10-1-2011',10);
+INSERT INTO Voo_executado Values(4,130,250,'12:0:00','13:00:00','10-1-2011',11);
+INSERT INTO Voo_executado Values(4,131,390,'14:00:00','15:00:00','10-1-2011',12);
 
-INSERT INTO AUsado Values(127,4,'Francisco Zeimoto');
-INSERT INTO AUsado Values(128,4,'Francisco Zeimoto');
-INSERT INTO AUsado Values(130,4,'Francisco Zeimoto');
-INSERT INTO AUsado Values(131,4,'Francisco Zeimoto');
+INSERT INTO AUsado Values(9,'Francisco Zeimoto');
+INSERT INTO AUsado Values(10,'Francisco Zeimoto');
+INSERT INTO AUsado Values(11,'Francisco Zeimoto');
+INSERT INTO AUsado Values(12,'Francisco Zeimoto');
 
-INSERT INTO PilotoUsado Values(127,4,10);
-INSERT INTO PilotoUsado Values(127,4,13);
-INSERT INTO HospUsado Values(127,4,20);
-INSERT INTO HospUsado Values(127,4,25);
-INSERT INTO HospUsado Values(127,4,30);
-INSERT INTO HospUsado Values(127,4,31);
-INSERT INTO ComissUsado Values(127,4,40);
+INSERT INTO PilotoUsado Values(9,10);
+INSERT INTO PilotoUsado Values(9,13);
+INSERT INTO HospUsado Values(9,20);
+INSERT INTO HospUsado Values(9,25);
+INSERT INTO HospUsado Values(9,30);
+INSERT INTO HospUsado Values(9,31);
+INSERT INTO ComissUsado Values(9,40);
 
-INSERT INTO PilotoUsado Values(128,4,10);
-INSERT INTO PilotoUsado Values(128,4,13);
-INSERT INTO HospUsado Values(128,4,20);
-INSERT INTO HospUsado Values(128,4,25);
-INSERT INTO HospUsado Values(128,4,30);
-INSERT INTO HospUsado Values(128,4,31);
-INSERT INTO ComissUsado Values(128,4,40);
+INSERT INTO PilotoUsado Values(10,10);
+INSERT INTO PilotoUsado Values(10,13);
+INSERT INTO HospUsado Values(10,20);
+INSERT INTO HospUsado Values(10,25);
+INSERT INTO HospUsado Values(10,30);
+INSERT INTO HospUsado Values(10,31);
+INSERT INTO ComissUsado Values(10,40);
 
-INSERT INTO PilotoUsado Values(130,4,10);
-INSERT INTO PilotoUsado Values(130,4,13);
-INSERT INTO HospUsado Values(130,4,20);
-INSERT INTO HospUsado Values(130,4,25);
-INSERT INTO HospUsado Values(130,4,30);
-INSERT INTO HospUsado Values(130,4,31);
-INSERT INTO ComissUsado Values(130,4,40);
+INSERT INTO PilotoUsado Values(11,10);
+INSERT INTO PilotoUsado Values(11,13);
+INSERT INTO HospUsado Values(11,20);
+INSERT INTO HospUsado Values(11,25);
+INSERT INTO HospUsado Values(11,30);
+INSERT INTO HospUsado Values(11,31);
+INSERT INTO ComissUsado Values(11,40);
 
-INSERT INTO PilotoUsado Values(131,4,10);
-INSERT INTO PilotoUsado Values(131,4,13);
-INSERT INTO HospUsado Values(131,4,20);
-INSERT INTO HospUsado Values(131,4,25);
-INSERT INTO HospUsado Values(131,4,30);
-INSERT INTO HospUsado Values(131,4,31);
-INSERT INTO ComissUsado Values(131,4,40);
+INSERT INTO PilotoUsado Values(12,10);
+INSERT INTO PilotoUsado Values(12,13);
+INSERT INTO HospUsado Values(12,20);
+INSERT INTO HospUsado Values(12,25);
+INSERT INTO HospUsado Values(12,30);
+INSERT INTO HospUsado Values(12,31);
+INSERT INTO ComissUsado Values(12,40);

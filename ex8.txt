@@ -67,33 +67,34 @@ create table Voo_executado(
 	horaExChegada time,
 	horaExPartida time,
 	dataVoo date,
-	Primary Key(nVooExecutado)
+	registado integer,
+	Primary Key(registado)
 
 );
 
 create table AUsado(
-	nVooExecutado integer References Voo_executado on delete Cascade,
+	registado integer References Voo_executado on delete Cascade,
 	NomeA text References aviao on delete Cascade,
-	primary key(nvooexecutado,nomeA)
+	primary key(registado ,nomeA)
 	
 );
 
 create table PilotoUsado(
-	nVooExecutado integer References Voo_executado on delete Cascade,
+	registado integer References Voo_executado on delete Cascade,
 	nBI integer references Piloto on delete cascade,
-	primary key(nvooexecutado,nbi)
+	primary key(registado ,nbi)
 );
 
 create table HospUsado(
-	nVooExecutado integer References Voo_executado on delete Cascade ,
+	registado integer References Voo_executado on delete Cascade ,
 	nBI integer References hosp on delete cascade,
-	primary key(nvooexecutado,nbi)
+	primary key(registado ,nbi)
 );
 
 create table ComissUsado(
-	nVooExecutado integer References Voo_executado on delete Cascade,
+	registado integer References Voo_executado on delete Cascade,
 	nBI integer references comiss on delete cascade ,
-	primary key(nvooexecutado,nbi)
+	primary key(registado ,nbi)
 );
 
 create table RestricaoPilotos(

@@ -4,7 +4,9 @@ from voo_planeado
 where diaSemana='Domingo'
 
 --b--
-
+select distinct nvoo
+from ausado natural inner join voo_executado
+where nomea='Nicolau Coelho''
 
 --c--perguntar
 
