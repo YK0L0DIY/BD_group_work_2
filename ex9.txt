@@ -179,8 +179,8 @@ INSERT INTO RestricaoHosp Values(70,2,130);
 
 --g--
 INSERT INTO Voo_planeado Values(131,'Paris','Bruxelas','Segunda','14:00:00','15:00:00',800);
-INSERT INTO RestricaoPilotos Values(5,1,130);
-INSERT INTO RestricaoHosp Values(70,2,130);
+INSERT INTO RestricaoPilotos Values(5,1,131);
+INSERT INTO RestricaoHosp Values(70,2,131);
 
 --h--
 INSERT INTO Voo_planeado Values(128,'Lisboa','Paris','Segunda','18:00:00','22:00:00',3500);
