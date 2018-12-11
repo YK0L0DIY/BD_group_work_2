@@ -1,0 +1,21 @@
+Modelo(Modelo, nLugares, Autonomia)
+Aviao(NomeA, Marca)
+modelo_de(Modelo, NomeA)
+AUsado(nVoo, nVooExecutado, NomeA)
+
+Funcionario(nBI, NIF, NomeF, DataN)
+Piloto(nBI, nCarta, anoInicio)
+Admin(nBI)
+Hosp(nBI, altura, peso, anoInicio)
+Comiss(nBI, altura, peso, anoInicio)
+
+Voo_executado(nVooExecutado, nVoo)
+Voo_planeado(nVoo, destino, origem, diaSemana, horasPartida, horasChegada, kms)
+
+PilotoUsado(nVoo, nVooExecutado, nBI)
+HospUsado(nVoo, nVooExecutado, nBI)
+ComissUsado(nVoo, nVooExecutado, nBI)
+
+RestricaoPilotos(AnosExpMin, nPilotos)
+RestricaoPilotos(PesoMax, nHosp)
+RestricaoPilotos(AltMin, nComiss)

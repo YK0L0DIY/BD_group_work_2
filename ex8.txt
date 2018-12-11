@@ -15,7 +15,7 @@ create table modelo_de(
 	Primary Key(Modelo,NomeA)
 );
 
-create table Funcionarios(
+create table Funcionario(
 	nBI integer Primary Key,
 	NIF integer,
 	NomeF text,
@@ -25,7 +25,7 @@ create table Funcionarios(
 create table Piloto(
 	nBI References Funcionario on delete Cascade,
 	nCarta integer,
-	anosInicio integer,
+	anoInicio integer,
 	Primary Key(nBI)
 );
 
@@ -38,7 +38,7 @@ create table Hosp(
 	nBI References Funcionario on delete Cascade,
 	altura integer,
 	peso integer,
-	anosInicio integer,
+	anoInicio integer,
 	Primary Key(nBI)
 );
 
@@ -46,7 +46,7 @@ create table Comiss(
 	nBI References Funcionario on delete Cascade,
 	altura integer,
 	peso integer,
-	anosInicio integer,
+	anoInicio integer,
 	Primary Key(nBI)
 );
 
@@ -105,25 +105,4 @@ create table RestricaoComiss(
 	AltMin integer,
 	nComiss integer,
 	Primary Key(AltMin,nPilotos)
-);
-
-create table PrecisaPilotos(
-	nVoo References Voo_planeado on delete Cascade,
-	AnosExpMin References ResticaoPiloto on delete Cascade,
-	nPilotos References RestricaoPiloto on delete Cascade,
-	Primary Key(nVoo, AnosExpMin, nPilotos)
-);
-
-create table PrecisaHosp(
-	nVoo References Voo_planeado on delete Cascade,
-	PesoMax References ResticaoHosp on delete Cascade,
-	nHosp References RestricaoHosp on delete Cascade,
-	Primary Key(nVoo, PesoMax, nHosp)
-);
-
-create table PrecisaComiss(
-	nVoo References Voo_planeado on delete Cascade,
-	AltMin References ResticaoComiss on delete Cascade,
-	nComiss References RestricaoComiss on delete Cascade,
-	Primary Key(nVoo, AltMin, nComiss)
 );
