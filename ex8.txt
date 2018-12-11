@@ -61,8 +61,15 @@ create table Voo_planeado(
 );
 
 create table Voo_executado(
-	nVooExecutado integer Primary Key,
-	nVoo integer References Voo_planeado on delete Cascade);
+	nVooExecutado integer,
+	nVoo integer References Voo_planeado on delete Cascade,
+	nPassageiros integer,
+	horaExChegada time,
+	horaExPartida time,
+	data date
+	Primary Key(nVooExecutado, nvoo)
+
+);
 
 create table AUsado(
 	nVoo integer references Voo_planeado on delete Cascade,

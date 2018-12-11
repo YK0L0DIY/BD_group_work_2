@@ -166,13 +166,28 @@ INSERT INTO RestricaoPilotos Values(5,1,126);
 INSERT INTO RestricaoHosp Values(70,2,126);
 INSERT INTO RestricaoComiss Values(165,1,126);
 
+--e--
+INSERT INTO Voo_planeado Values(127,'Paris','Lisboa','Segunda','8:00:00','11:00:00',3500);
+INSERT INTO RestricaoPilotos Values(5,2,127);
+INSERT INTO RestricaoHosp Values(70,4,127);
+INSERT INTO RestricaoComiss Values(165,1,127);
 
+--f--
+INSERT INTO Voo_planeado Values(130,'Bruxelas','Paris','Segunda','12:00:00','13:00:00',800);
+INSERT INTO RestricaoPilotos Values(5,1,130);
+INSERT INTO RestricaoHosp Values(70,2,130);
 
+--g--
+INSERT INTO Voo_planeado Values(131,'Paris','Bruxelas','Segunda','14:00:00','15:00:00',800);
+INSERT INTO RestricaoPilotos Values(5,1,130);
+INSERT INTO RestricaoHosp Values(70,2,130);
 
+--h--
+INSERT INTO Voo_planeado Values(128,'Lisboa','Paris','Segunda','18:00:00','22:00:00',3500);
+INSERT INTO RestricaoPilotos Values(5,2,128);
+INSERT INTO RestricaoHosp Values(70,4,128);
+INSERT INTO RestricaoComiss Values(165,1,128);
 
-
-
-
-
-
-
+----VOOS EFETIVOS----
+--a--
+INSERT INTO Voo_executado Values();
