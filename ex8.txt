@@ -72,27 +72,32 @@ create table Voo_executado(
 );
 
 create table AUsado(
-	nVoo integer references Voo_planeado on delete Cascade,
-	nVooExecutado integer References Voo_executado on delete Cascade,
-	NomeA text References Aviao on delete Cascade
+	nVoo integer,
+	nVooExecutado integer ,
+	NomeA text,
+	primary key(nvoo,nvooexecutado,nomeA)
+	
 );
 
 create table PilotoUsado(
-	nVoo integer references Voo_planeado on delete Cascade,
-	nVooExecutado integer References Voo_executado on delete Cascade,
-	nBI integer References Funcionario on delete Cascade
+	nVoo integer ,
+	nVooExecutado integer ,
+	nBI integer,
+	primary key(nvoo,nvooexecutado,nbi)
 );
 
 create table HospUsado(
-	nVoo integer references Voo_planeado on delete Cascade,
-	nVooExecutado integer References Voo_executado on delete Cascade,
-	nBI integer References Funcionario on delete Cascade
+	nVoo integer,
+	nVooExecutado integer ,
+	nBI integer,
+	primary key(nvoo,nvooexecutado,nbi)
 );
 
 create table ComissUsado(
-	nVoo integer references Voo_planeado on delete Cascade,
-	nVooExecutado integer References Voo_executado on delete Cascade,
-	nBI integer References Funcionario on delete Cascade
+	nVoo integer ,
+	nVooExecutado integer ,
+	nBI integer,
+	primary key(nvoo,nvooexecutado,nbi)
 );
 
 create table RestricaoPilotos(
