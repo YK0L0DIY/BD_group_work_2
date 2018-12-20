@@ -16,3 +16,143 @@ select nomea
 from aviao natural inner join modelo_de natural inner join modelo natural inner join maximo
 
 --d--
+with total (nvoo, np) as
+(select nvoo,sum(np)
+from(
+select nvoo, sum(npilotos) as nP
+from voo_planeado natural inner join restricaopilotos
+group by nvoo
+union all
+select nvoo, sum (nhosp) as nP
+from voo_planeado natural inner join restricaohosp
+group by nvoo
+union all
+select nvoo, sum(ncomiss) as nP
+from voo_planeado natural inner join restricaocomiss
+group by nvoo
+) as allP
+group by nvoo)
+
+select nvoo
+from (select max(np)as np
+	 from total)as n natural inner join total
+
+--e--
+with countH (nbi,nvoos) as(
+select nbi,count(registado) as nVoos
+from hospusado
+group by nbi)
+
+select nbi
+from(select max(nvoos) as nvoos
+	from countH)as n natural inner join countH
+
+--f--
+with numero (nvoo,npassageiros) as(
+select nvoo,npassageiros
+from voo_executado
+where datavoo >= '2011-01-01' AND datavoo <= '2011-01-31')
+
+select nvoo
+from (select max(npassageiros)as npassageiros
+	 from numero) as n natural inner join numero
+
+--g--
+with vooportrajeto (nvooExecutado,nvoos)as(
+select nvooExecutado,count(nvoo)as nvoos
+from voo_executado 
+group by nvooExecutado)
+
+select nvooExecutado
+from(select max(nvoos)as nvoos
+	from vooportrajeto ) as n natural inner join vooportrajeto
+
+--h--
+with natrasos (nvoo,atrasos) as (
+select nvoo,count(*) as atrasos
+from voo_executado natural inner join voo_planeado
+where horaexpartida > horaspartida
+group by nvoo)
+
+select nvoo
+from(select max(atrasos)as atrasos
+	from natrasos) as n natural inner join natrasos
+
+--i--
+with destinomaisrapido (destino, rapidos)as(
+select destino, count(nvoo)as rapidos
+from voo_executado natural inner join voo_planeado
+where horaexchegada < horasChegada
+group by destino)
+
+select destino
+from(select max(rapidos)as rapidos 
+	from destinomaisrapido)as n natural inner join destinomaisrapido
+
+--j--
+with total (registado, np) as
+(select registado,sum(np)
+from(
+select registado, count(nbi) as nP
+from pilotousado natural inner join voo_executado
+group by registado
+union all
+select registado, count(nbi) as nP
+from hospusado natural inner join voo_executado
+group by registado
+union all
+select registado, count(nbi) as nP
+from comissusado natural inner join voo_executado
+group by registado
+) as allP
+group by registado)
+
+select nvoo,np as numeroDeTriplantes,npassageiros
+from total natural inner join voo_executado
+
+--k--
+with numero (nvoo,npassageiros) as(
+select nvoo , npassageiros
+from voo_executado
+where dataVoo >= '2011-01-01' and dataVoo <='2011-01-31')
+
+select nvoo
+from (select max(npassageiros)as npassageiros
+	  from numero ) as n natural inner join numero
+
+--l--
+with totalF (registado, foram) as
+(select registado,sum(np) as foram
+from(
+select registado, count(nbi) as nP
+from pilotousado natural inner join voo_executado
+group by registado
+union all
+select registado, count(nbi) as nP
+from hospusado natural inner join voo_executado
+group by registado
+union all
+select registado, count(nbi) as nP
+from comissusado natural inner join voo_executado
+group by registado
+) as allP
+group by registado)
+
+select nvoo
+from(
+select nvoo,sum(np) as experados
+from(
+select nvoo, sum(npilotos) as nP
+from voo_planeado natural inner join restricaopilotos
+group by nvoo
+union all
+select nvoo, sum (nhosp) as nP
+from voo_planeado natural inner join restricaohosp
+group by nvoo
+union all
+select nvoo, sum(ncomiss) as nP
+from voo_planeado natural inner join restricaocomiss
+group by nvoo
+) as allP
+group by nvoo) as n natural inner join totalf natural inner join voo_executado
+where foram>experados
